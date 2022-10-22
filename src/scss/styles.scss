@@ -1,0 +1,111 @@
+@import "./variables";
+@import "../../node_modules/normalize.css/normalize.css";
+
+// .attribution { font-size: 11px; text-align: center; }
+// .attribution a { color: hsl(228, 45%, 44%); }
+
+html {
+  font-size: 62.5%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $veryLightGrayishBlue;
+}
+
+.notifications-wrapper {
+  background-color: $white;
+  padding: 0.8rem 1.8rem;
+
+  &__hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+
+    &-left-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-notifications-amount {
+      font-size: 1.5rem;
+      background-color: $blue;
+      padding: 0.36rem 1.2rem;
+      border-radius: 0.8rem;
+      color: $white;
+      margin-left: 0.9rem;
+    }
+
+    &-notifications {
+      font-size: 1.96rem;
+    }
+
+    &-mark-as-read {
+      font-size: 1.36rem;
+      color: $darkGrayishBlue
+    }
+  }
+}
+
+.notification-wrapper {
+  background-color: $veryLightGrayishBlue;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.9rem 0.5rem;
+
+  &__profile-image {
+    width: 3.9rem;
+  }
+
+  &__info {
+    font-size: 1.4rem;
+  }
+
+  &__name {
+    font-weight: 800;
+    color: $veryDarkBlue;
+  }
+
+  &__image-container {
+    margin: 1rem 1.5rem;
+  }
+
+  &__info {
+    color: $darkGrayishBlue;
+    line-height: 1.8rem;
+    margin: 0 0 0.7rem;
+  }
+
+  &__time {
+    font-size: 1.3rem;
+    color: $grayishBlue;
+  }
+
+  &__topic-info {
+    font-weight: 800;
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__topic-image {
+    width: 4rem;
+  }
+
+  &--checked {
+    background: $white;
+  }
+}
