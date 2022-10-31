@@ -18,24 +18,26 @@
     />
     <title>Frontend Mentor | Notifications page</title>
     <link rel="stylesheet" href="./scss/styles.scss" />
+    <link rel="stylesheet" href="./scss/media-queries.scss" media="(min-width: 560px)">
   </head>
   <body>
     <main class="main-container">
       <div class="notifications-wrapper">
         <header class="notifications-wrapper__hero">
           <div class="notifications-wrapper__hero-left-wrapper">
-          <h1 class="notifications-wrapper__hero-notifications">
-            Notifications
-          </h1>
-          <span class="notifications-wrapper__hero-notifications-amount"
-            >3</span
-          ></div>
+            <h1 class="notifications-wrapper__hero-notifications">
+              Notifications
+            </h1>
+            <span class="notifications-wrapper__hero-notifications-amount"
+              >3</span
+            >
+          </div>
           <span class="notifications-wrapper__hero-mark-as-read"
             >Mark all as read</span
           >
         </header>
 
-        <div class="notification-wrapper">
+        <div class="notification-wrapper notification-wrapper--not-checked">
           <figure class="notification-wrapper__image-container">
             <img
               class="notification-wrapper__profile-image"
@@ -45,17 +47,17 @@
           </figure>
           <div class="notification-wrapper__info-container">
             <p class="notification-wrapper__info">
-              <span class="notification-wrapper__name">Mark Webber </span>reacted
-              to your recent post
+              <span class="notification-wrapper__name">Mark Webber </span
+              >reacted to your recent post
               <span class="notification-wrapper__topic-info"
                 >My first tournament today!</span
-              >
+              ><span class="notification-wrapper__notification-icon"></span>
             </p>
             <small class="notification-wrapper__time">1m ago</small>
           </div>
         </div>
 
-        <div class="notification-wrapper">
+        <div class="notification-wrapper notification-wrapper--not-checked">
           <figure class="notification-wrapper__image-container">
             <img
               class="notification-wrapper__profile-image"
@@ -67,12 +69,13 @@
             <p class="notification-wrapper__info">
               <span class="notification-wrapper__name">Angela Gray </span
               >followed you
+              <span class="notification-wrapper__notification-icon"></span>
             </p>
             <small class="notification-wrapper__time">5m ago</small>
           </div>
         </div>
 
-        <div class="notification-wrapper">
+        <div class="notification-wrapper notification-wrapper--not-checked">
           <figure class="notification-wrapper__image-container">
             <img
               class="notification-wrapper__profile-image"
@@ -84,35 +87,40 @@
             <p class="notification-wrapper__info">
               <span class="notification-wrapper__name">Jacob Thompson </span>has
               joined your group
-              <span class="notification-wrapper__topic-info notification-wrapper__topic-info--blue">Chess Club</span>
+              <span
+                class="notification-wrapper__topic-info notification-wrapper__topic-info--blue"
+                >Chess Club</span
+              ><span class="notification-wrapper__notification-icon"></span>
             </p>
             <small class="notification-wrapper__time">1 day ago</small>
           </div>
         </div>
 
-        <div class="notification-wrapper notification-wrapper--checked">
-          <figure class="notification-wrapper__image-container">
-            <img
-              class="notification-wrapper__profile-image"
-              src="./assets/images/avatar-rizky-hasanuddin.webp"
-              alt=""
-            />
-          </figure>
-          <div class="notification-wrapper__info-container">
-            <p class="notification-wrapper__info">
-              <span class="notification-wrapper__name">Rizky Hasanuddin </span
-              >sent you a private message
-            </p>
-            <small class="notification-wrapper__time">5 days ago</small>
-            <div>
-              Hello, thanks for setting up the Chess Club. I've been a member
-              for a few weeks now and I'm already having lots of fun and
-              improving my game.
+        <div class="notification-wrapper">
+          <div class="notification-wrapper__top-info-container">
+            <figure class="notification-wrapper__image-container">
+              <img
+                class="notification-wrapper__profile-image"
+                src="./assets/images/avatar-rizky-hasanuddin.webp"
+                alt=""
+              />
+            </figure>
+            <div class="notification-wrapper__info-container">
+              <p class="notification-wrapper__info">
+                <span class="notification-wrapper__name">Rizky Hasanuddin </span
+                >sent you a private message
+              </p>
+              <small class="notification-wrapper__time">5 days ago</small>
             </div>
+          </div>
+          <div class="notification-wrapper__message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
           </div>
         </div>
 
-        <div class="notification-wrapper notification-wrapper--checked">
+        <div class="notification-wrapper">
           <figure class="notification-wrapper__image-container">
             <img
               class="notification-wrapper__profile-image"
@@ -123,14 +131,18 @@
           <div class="notification-wrapper__info-container">
             <p class="notification-wrapper__info">
               <span class="notification-wrapper__name">Kimberly Smith </span
-              >commented on your picture>
+              >commented on your picture
             </p>
             <small class="notification-wrapper__time">1 week ago</small>
           </div>
-          <img class="notification-wrapper__topic-image" src="./assets/images/image-chess.webp" alt="" />
+          <img
+            class="notification-wrapper__topic-image"
+            src="./assets/images/image-chess.webp"
+            alt=""
+          />
         </div>
 
-        <div class="notification-wrapper notification-wrapper--checked">
+        <div class="notification-wrapper">
           <figure class="notification-wrapper__image-container">
             <img
               class="notification-wrapper__profile-image"
@@ -150,7 +162,7 @@
           </div>
         </div>
 
-        <div class="notification-wrapper notification-wrapper--checked">
+        <div class="notification-wrapper">
           <figure class="notification-wrapper__image-container">
             <img
               class="notification-wrapper__profile-image"
@@ -162,16 +174,24 @@
             <p class="notification-wrapper__info">
               <span class="notification-wrapper__name">Anna Kim </span>left the
               group
-              <span class="notification-wrapper__topic-info notification-wrapper__topic-info--blue">Chess Club</span>
+              <span
+                class="notification-wrapper__topic-info notification-wrapper__topic-info--blue"
+                >Chess Club</span
+              >
             </p>
             <small class="notification-wrapper__time">2 weeks ago</small>
           </div>
         </div>
       </div>
     </main>
-    <!-- <div class="attribution"> -->
-    <!-- Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.  -->
-    <!-- Coded by <a href="#">Ivan</a>. -->
-    <!-- </div> -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Ivan</a>.
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
   </body>
 </html>
